@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
-  { label: "Leadership", href: "#leadership" }, // ✅ added
+  { label: "Leadership", href: "#leadership" },
   { label: "Education", href: "#education" },
   { label: "Achievements", href: "#achievements" },
   { label: "Contact", href: "#contact" },
@@ -20,23 +20,21 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY < 120) {
-        setActive("#home");
-        return;
-      }
-
+      const scrollPosition = window.scrollY + 140;
       let current = "#home";
 
       navLinks.forEach((link) => {
         const section = document.querySelector(link.href);
+        if (!section) return;
 
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 120 && rect.bottom >= 120) {
-            current = `#${section.id}`;
-          }
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
+          current = link.href;
         }
       });
 
@@ -49,32 +47,37 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleHomeClick = (e) => {
-    e.preventDefault();
-    const homeSection = document.querySelector("#home");
-    if (homeSection) {
-      homeSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    window.history.replaceState({}, "", "#home");
-    setActive("#home");
-    setOpen(false);
-  };
-
-  const handleSectionClick = (e, href) => {
-    e.preventDefault();
+  const scrollToSection = (href) => {
     const section = document.querySelector(href);
     if (!section) return;
 
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    const navbarOffset = 100;
+    const sectionTop =
+      section.getBoundingClientRect().top + window.pageYOffset - navbarOffset;
+
+    window.scrollTo({
+      top: sectionTop,
+      behavior: "smooth",
+    });
+
     window.history.replaceState({}, "", href);
     setActive(href);
     setOpen(false);
   };
 
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    scrollToSection("#home");
+  };
+
+  const handleSectionClick = (e, href) => {
+    e.preventDefault();
+    scrollToSection(href);
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        {/* Logo */}
         <a
           href="#home"
           onClick={handleHomeClick}
@@ -91,33 +94,9 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Desktop Nav */}
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => {
             const isActive = active === link.href;
-
-            if (link.label === "Home") {
-              return (
-                <a
-                  key={link.label}
-                  href="#home"
-                  onClick={handleHomeClick}
-                  className={`relative text-sm transition-all duration-200 ${
-                    isActive
-                      ? "text-indigo-400"
-                      : "text-zinc-300 hover:-translate-y-[1px] hover:text-indigo-400"
-                  }`}
-                >
-                  {link.label}
-
-                  <span
-                    className={`absolute left-0 -bottom-1 h-[2px] w-full bg-indigo-400 transition-all duration-300 ${
-                      isActive ? "opacity-100" : "opacity-0"
-                    }`}
-                  />
-                </a>
-              );
-            }
 
             return (
               <a
@@ -131,7 +110,6 @@ export default function Navbar() {
                 }`}
               >
                 {link.label}
-
                 <span
                   className={`absolute left-0 -bottom-1 h-[2px] w-full bg-indigo-400 transition-all duration-300 ${
                     isActive ? "opacity-100" : "opacity-0"
@@ -142,7 +120,6 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Mobile Button */}
         <button
           onClick={() => setOpen(!open)}
           className="text-white transition hover:text-indigo-400 md:hidden"
@@ -152,29 +129,11 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {open && (
         <div className="border-t border-white/10 bg-zinc-950 md:hidden">
           <div className="flex flex-col space-y-4 px-4 py-4">
             {navLinks.map((link) => {
               const isActive = active === link.href;
-
-              if (link.label === "Home") {
-                return (
-                  <a
-                    key={link.label}
-                    href="#home"
-                    onClick={handleHomeClick}
-                    className={`text-sm transition-all duration-200 ${
-                      isActive
-                        ? "text-indigo-400"
-                        : "text-zinc-300 hover:translate-x-1 hover:text-indigo-400"
-                    }`}
-                  >
-                    {link.label}
-                  </a>
-                );
-              }
 
               return (
                 <a
