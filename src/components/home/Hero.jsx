@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="mx-auto flex min-h-[calc(100vh-73px)] max-w-6xl items-center px-4 py-16 sm:px-6 lg:px-8"
+      className="scroll-mt-24 mx-auto flex min-h-[calc(100vh-73px)] max-w-6xl items-center px-4 py-16 sm:px-6 lg:px-8"
     >
       <div className="max-w-3xl">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-indigo-400/80">

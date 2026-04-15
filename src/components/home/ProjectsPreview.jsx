@@ -101,7 +101,7 @@ export default function ProjectsPreview() {
   return (
     <section
       id="projects"
-      className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
+      className="scroll-mt-28 mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
     >
       <p className="text-sm font-medium uppercase tracking-[0.2em] text-indigo-400/80">
         Projects

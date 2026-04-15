@@ -54,7 +54,7 @@ export default function LeadershipSection() {
   return (
     <section
       id="leadership"
-      className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
+      className="scroll-mt-28 mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
     >
       <p className="text-sm font-medium uppercase tracking-[0.2em] text-indigo-400/80">
         Leadership & Activities
@@ -68,8 +68,11 @@ export default function LeadershipSection() {
         {leadership.map((item, index) => (
           <div
             key={index}
-            className="rounded-3xl border border-white/10 bg-zinc-900/80 p-6 transition hover:border-indigo-400/30 hover:shadow-lg hover:shadow-indigo-500/10"
+            className="group relative rounded-3xl border border-white/10 bg-zinc-900/80 p-6 transition hover:border-indigo-400/40 hover:shadow-lg hover:shadow-indigo-500/10"
           >
+            {/* Indigo accent line */}
+            <div className="absolute left-0 top-0 h-full w-1 rounded-l-3xl bg-indigo-400/80 opacity-0 transition group-hover:opacity-100" />
+
             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
               <div>
                 <h3 className="text-xl font-semibold text-white">
@@ -80,7 +83,7 @@ export default function LeadershipSection() {
                 </p>
               </div>
 
-              <span className="inline-flex w-fit rounded-full border border-white/10 px-3 py-1 text-xs font-medium text-indigo-300">
+              <span className="inline-flex w-fit rounded-full border border-indigo-400/20 px-3 py-1 text-xs font-medium text-indigo-300">
                 {item.period}
               </span>
             </div>
@@ -88,7 +91,7 @@ export default function LeadershipSection() {
             <ul className="mt-5 space-y-3 text-sm leading-6 text-zinc-300">
               {item.points.map((point, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-500" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400/70" />
                   <span>{point}</span>
                 </li>
               ))}

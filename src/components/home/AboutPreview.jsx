@@ -4,7 +4,7 @@ export default function AboutPreview() {
   return (
     <section
       id="about"
-      className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
+      className="scroll-mt-28 mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
     >
       <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
         {/* LEFT */}
@@ -83,7 +83,7 @@ export default function AboutPreview() {
                     <img
                       src="/icons/github.png"
                       alt="GitHub"
-                      className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
+                      className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
 
@@ -103,7 +103,7 @@ export default function AboutPreview() {
                     <img
                       src="/icons/linkedin.png"
                       alt="LinkedIn"
-                      className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
+                      className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
 
