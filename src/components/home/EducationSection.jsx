@@ -24,7 +24,7 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="scroll-mt-28 mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
+      className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
     >
       {/* Label */}
       <p className="text-sm font-medium uppercase tracking-[0.2em] text-indigo-400/80">

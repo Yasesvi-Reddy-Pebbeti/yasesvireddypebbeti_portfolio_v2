@@ -75,7 +75,7 @@ export default function AchievementsPreview() {
   return (
     <section
       id="achievements"
-      className="scroll-mt-28 mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
+      className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
     >
       <p className="text-sm font-medium uppercase tracking-[0.2em] text-indigo-400/80">
         Achievements

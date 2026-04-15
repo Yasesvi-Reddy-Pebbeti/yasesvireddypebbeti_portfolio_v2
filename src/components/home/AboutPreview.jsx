@@ -4,7 +4,7 @@ export default function AboutPreview() {
   return (
     <section
       id="about"
-      className="scroll-mt-28 mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
+      className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
     >
       <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
         {/* LEFT */}

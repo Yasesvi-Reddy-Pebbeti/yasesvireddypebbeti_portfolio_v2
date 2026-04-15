@@ -2,7 +2,7 @@ export default function ContactCTA() {
   return (
     <section
       id="contact"
-      className="scroll-mt-28 mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
+      className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
     >
       <div className="rounded-3xl border border-white/10 bg-zinc-900 p-8 sm:p-10">
         <h2 className="text-2xl font-bold text-white sm:text-3xl">

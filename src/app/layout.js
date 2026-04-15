@@ -17,6 +17,13 @@ export const metadata = {
   title: "Yasesvi Reddy Pebbeti | Portfolio",
   description:
     "Portfolio of Yasesvi Reddy Pebbeti — Software Engineer, Full-Stack Developer, and AI/ML enthusiast.",
+
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -17,10 +17,14 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#home");
+  const headerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 140;
+      const headerHeight = headerRef.current?.offsetHeight ?? 80;
+      const offset = headerHeight + 80;
+      const scrollPosition = window.scrollY + offset;
+
       let current = "#home";
 
       navLinks.forEach((link) => {
@@ -42,21 +46,30 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   const scrollToSection = (href) => {
     const section = document.querySelector(href);
     if (!section) return;
 
-    const navbarOffset = 100;
-    const sectionTop =
-      section.getBoundingClientRect().top + window.pageYOffset - navbarOffset;
+    const headerHeight = headerRef.current?.offsetHeight ?? 80;
+    const extraGap = 96;
+
+    const targetY =
+      section.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight -
+      extraGap;
 
     window.scrollTo({
-      top: sectionTop,
+      top: Math.max(targetY, 0),
       behavior: "smooth",
     });
 
@@ -65,22 +78,20 @@ export default function Navbar() {
     setOpen(false);
   };
 
-  const handleHomeClick = (e) => {
-    e.preventDefault();
-    scrollToSection("#home");
-  };
-
-  const handleSectionClick = (e, href) => {
+  const handleNavClick = (e, href) => {
     e.preventDefault();
     scrollToSection(href);
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur"
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a
           href="#home"
-          onClick={handleHomeClick}
+          onClick={(e) => handleNavClick(e, "#home")}
           className="flex items-center gap-3 group"
         >
           <img
@@ -89,12 +100,12 @@ export default function Navbar() {
             className="h-9 w-9 transition-all duration-200 group-hover:scale-110"
           />
 
-          <span className="hidden text-lg font-semibold tracking-tight text-white transition-colors duration-200 group-hover:text-indigo-400 sm:block">
+          <span className="hidden whitespace-nowrap text-lg font-semibold tracking-tight text-white transition-colors duration-200 group-hover:text-indigo-400 sm:block">
             Yasesvi Reddy
           </span>
         </a>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => {
             const isActive = active === link.href;
 
@@ -102,7 +113,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                onClick={(e) => handleSectionClick(e, link.href)}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={`relative text-sm transition-all duration-200 ${
                   isActive
                     ? "text-indigo-400"
@@ -122,7 +133,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="text-white transition hover:text-indigo-400 md:hidden"
+          className="text-white transition hover:text-indigo-400 lg:hidden"
           aria-label="Toggle menu"
         >
           ☰
@@ -130,7 +141,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-white/10 bg-zinc-950 md:hidden">
+        <div className="border-t border-white/10 bg-zinc-950 lg:hidden">
           <div className="flex flex-col space-y-4 px-4 py-4">
             {navLinks.map((link) => {
               const isActive = active === link.href;
@@ -139,7 +150,7 @@ export default function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={(e) => handleSectionClick(e, link.href)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className={`text-sm transition-all duration-200 ${
                     isActive
                       ? "text-indigo-400"
