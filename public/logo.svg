@@ -1,0 +1,7 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="20" fill="#18181b"></rect>
+  
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="48" font-weight="700">
+    <tspan fill="#ffffff">Y</tspan><tspan fill="#818cf8">R</tspan>
+  </text>
+</svg>
