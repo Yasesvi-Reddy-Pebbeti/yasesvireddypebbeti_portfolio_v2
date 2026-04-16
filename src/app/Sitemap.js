@@ -3,7 +3,7 @@
 export default function sitemap() {
   return [
     {
-      url: "https://yasesvireddy.dev/home",
+      url: "https://yasesvireddy.dev/",
       lastModified: new Date(),
     },
   ];
