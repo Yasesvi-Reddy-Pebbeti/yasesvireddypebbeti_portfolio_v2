@@ -20,6 +20,22 @@ const achievements = {
       link: "https://ijircce.com/admin/main/storage/app/pdf/fGL5m6R2DNR1KNtQXtOMoDHYgRVmmjgHQXTa2g1p.pdf",
       type: "Journal Publication",
     },
+    {
+      title: "Eco-Intelligence: Revolutionizing AI with Sustainability in Mind",
+      authors: "Yasesvi Reddy Pebbeti, et al.",
+      source: "IJMRSET",
+      date: "April 2026",
+      link: "https://www.ijmrset.com/special-issues/2026/ISGTPES-2025/23_Eco-Intelligence%20Revolutionizing%20AI%20with%20Sustainability%20in%20Mind.pdf",
+      type: "Journal Publication",
+    },
+    {
+      title: "Green Urbanization: Sustainable Solutions for Tomorrow's Cities",
+      authors: "Yasesvi Reddy Pebbeti, et al.",
+      source: "IJMRSET",
+      date: "April 2026",
+      link: "https://www.ijmrset.com/special-issues/2026/ISGTPES-2025/24_Green%20Urbanization%20Sustainable%20Solutions%20for%20Tomorrow's%20Cities.pdf",
+      type: "Journal Publication",
+    },
   ],
   certifications: [
     {
