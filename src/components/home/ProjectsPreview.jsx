@@ -18,7 +18,7 @@ const projects = [
     tags: ["C++", "OpenMP", "MPI", "Pthreads", "gprof"],
     github:
       "https://github.com/Yasesvi-Reddy-Pebbeti/Parallel-Sorting-Performance",
-    demo: "#",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/Parallel-Sorting-Performance",
   },
   {
     title: "Brain Tumor Classification Using CNN & Grad-CAM",
@@ -45,54 +45,61 @@ const projects = [
     tags: ["C", "Linux", "Kernel", "nproc"],
     github:
       "https://github.com/Yasesvi-Reddy-Pebbeti/Kernel-Module-for-System-Call-Logging",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/Kernel-Module-for-System-Call-Logging",
   },
   {
     title: "Blockchain-Based Product Authentication",
     description:
       "Built a blockchain-backed verification system for counterfeit detection using digital signatures and QR-based authentication, achieving ~98% detection accuracy.",
     tags: ["Python", "Blockchain", "Security", "ML"],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/Authentication-of-Product-Counterfeits-Elimination-Using-Blockchain",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/Authentication-of-Product-Counterfeits-Elimination-Using-Blockchain",
   },
   {
     title: "Multi-Model Early Disease Detection & Risk Classification",
     description:
       "Developed a unified ML pipeline to predict risk across Heart Disease, Diabetes, and COVID-19 ICU admission using probability-based and interpretable outputs.",
     tags: ["Python", "Machine Learning", "Healthcare", "Data Science"],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/early_disease_detection_using_ml",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/early_disease_detection_using_ml",
   },
   {
     title: "Rotation Equivariance in CNN Using the D4 Group",
     description:
       "Implemented a D4-equivariant CNN for satellite image classification, improving consistency across rotated inputs and outperforming a baseline CNN.",
     tags: ["Python", "Deep Learning", "e2cnn", "Computer Vision"],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/Rotation-Equivariance-in-CNN-Using-the-D4-Group",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/Rotation-Equivariance-in-CNN-Using-the-D4-Group",
   },
   {
     title: "Software Defects Classification",
     description:
       "Built an ML-based defect classification system to improve software bug triaging, increasing classification accuracy by ~18% through feature engineering and model tuning.",
     tags: ["Python", "Machine Learning", "EDA"],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/Software-Defects-Classification",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/Software-Defects-Classification",
   },
   {
     title: "Plant Disease Identification & Pesticide Recommendation",
     description:
       "Developed a CNN-based system for plant disease detection and pesticide recommendation, achieving ~92% classification accuracy in an agriculture-focused web workflow.",
     tags: ["Python", "CNN", "Agritech", "Web App"],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/Plant-Disease-Identification-and-Pestiside-Recmmendation-Using-CNN",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/Plant-Disease-Identification-and-Pestiside-Recmmendation-Using-CNN",
   },
   {
     title: "Content-Based Movie Recommendation System",
     description:
       "Built a recommendation engine using content-based filtering on genre and metadata features, improving recommendation relevance by ~20%.",
     tags: ["Python", "Recommendation System", "Machine Learning"],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/Content-Based-Movie-Recomendation-System",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/Content-Based-Movie-Recomendation-System",
   },
 ];
 
