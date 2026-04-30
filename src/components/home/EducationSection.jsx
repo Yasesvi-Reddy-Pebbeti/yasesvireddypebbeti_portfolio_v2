@@ -5,7 +5,12 @@ const education = [
     duration: "2024 – 2026",
     logo: "/logos/education/suny.png",
     details: [
-      "Relevant Coursework: AI, Distributed Systems, Parallel Computing",
+      "GPA: [3.67/4.0]",
+      "Relevant Coursework: Machine Learning, Artificial Intelligence, Parallel Computing, Software Engineering, Cryptography & Data Security",
+      "Focus Areas: Scalable Systems, AI/ML Engineering, Distributed Computing",
+      "Technologies: Python, TensorFlow, OpenMP, MPI, Git, Linux",
+      "Built end-to-end academic projects including CNN-based classification systems, parallel computing implementations, and full-stack web applications",
+      "Leadership: President, SUNY Badminton Club (Jan 2025 – Jan 2026); IT Support & Crew Instructor, NYBPC MV 2025 & NYBPC MV 2026",
     ],
   },
   {
@@ -14,8 +19,12 @@ const education = [
     duration: "2020 – 2024",
     logo: "/logos/education/osmania.png",
     details: [
-      "Coursework: Data Structures, Algorithms, Operating Systems, DBMS, Computer Networks",
-      "Built multiple academic and team-based projects focused on software engineering and machine learning",
+      "CGPA: [7.17/10]",
+      "Core Coursework: Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Object-Oriented Design",
+      "Strong foundation in algorithm design, system-level programming, and database architecture",
+      "Technologies: C++, JavaScript, SQL, Python",
+      "Developed multiple academic and team-based projects focused on software engineering, data processing, and backend systems",
+      "Leadership: President, Matrusri Orators Club; Head Student Coordinator, Institution of Engineers India (I.E.I), Department of Information Technology",
     ],
   },
 ];

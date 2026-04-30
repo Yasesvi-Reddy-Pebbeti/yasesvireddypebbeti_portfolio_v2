@@ -2,32 +2,51 @@ const skills = [
   {
     category: "Languages",
     icon: "/logos/categories/languages.svg",
-    items: ["Python", "JavaScript", "C++"],
+    items: ["Python", "JavaScript", "C++", "Java"],
   },
   {
     category: "Frameworks",
     icon: "/logos/categories/frameworks.svg",
-    items: ["React", "Next.js", "Node.js", "Express.js", "Tailwind"],
+    items: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "Django",
+      "Flask",
+      "Tailwind CSS",
+    ],
   },
   {
     category: "Databases",
     icon: "/logos/categories/databases.svg",
-    items: ["MongoDB", "MySQL"],
+    items: ["MongoDB", "MySQL", "PostgreSQL"],
+  },
+  {
+    category: "Cloud & DevOps",
+    icon: "/logos/categories/tools.svg",
+    items: ["AWS (S3)", "Docker", "Kubernetes", "CI/CD", "Linux"],
   },
   {
     category: "Tools",
     icon: "/logos/categories/tools.svg",
-    items: ["Git", "GitHub", "Docker", "Postman"],
+    items: ["Git", "GitHub", "Postman"],
   },
   {
     category: "Data / ML",
     icon: "/logos/categories/ml.svg",
-    items: ["TensorFlow", "NumPy", "Pandas", "CNN", "Grad-CAM"],
+    items: ["TensorFlow", "Scikit-learn", "NumPy", "Pandas", "CNN", "Grad-CAM"],
   },
   {
     category: "Concepts",
     icon: "/logos/categories/concepts.svg",
-    items: ["DSA", "REST APIs", "OOP", "Parallel Computing"],
+    items: [
+      "Data Structures & Algorithms",
+      "REST APIs",
+      "Object-Oriented Programming",
+      "Parallel Computing",
+      "System Design Basics",
+    ],
   },
 ];
 
