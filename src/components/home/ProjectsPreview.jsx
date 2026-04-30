@@ -8,15 +8,16 @@ const projects = [
     description:
       "Built a scalable multi-tenant web platform with dynamic subdomain routing and tenant-specific content rendering using a unified codebase.",
     tags: ["Next.js", "Node.js", "MongoDB", "NGINX", "PM2"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/Yasesvi-Reddy-Pebbeti/multi-tenant-conf-app-js",
+    demo: "https://multi-tenant-conf-app-js.vercel.app/ai-frontiers",
   },
   {
     title: "Parallel Sorting: Implementation, Profiling & Analysis",
     description:
       "Implemented parallel sorting with OpenMP, MPI, and Pthreads, reducing execution time by ~45% through profiling, thread optimization, and memory tuning.",
     tags: ["C++", "OpenMP", "MPI", "Pthreads", "gprof"],
-    github: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/Parallel-Sorting-Performance",
     demo: "#",
   },
   {
@@ -24,24 +25,26 @@ const projects = [
     description:
       "Developed a CNN-based medical imaging model with VGG16 transfer learning, achieving ~96% test accuracy and improving interpretability with Grad-CAM visualizations.",
     tags: ["Python", "TensorFlow", "CNN", "VGG16", "Grad-CAM"],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/Brain-Tumor-Classification-Using-CNN-and-GradCAM",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/Brain-Tumor-Classification-Using-CNN-and-GradCAM",
   },
   {
     title: "Multi-Model Molecular Property Prediction",
     description:
       "Built a Graph Neural Network pipeline to predict molecular properties from structured chemical data, improving robustness across molecular datasets.",
     tags: ["Python", "GNN", "PyTorch", "Graph ML"],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/Molecular_Property_Prediction_Using_GNN",
+    demo: "https://github.com/Yasesvi-Reddy-Pebbeti/Molecular_Property_Prediction_Using_GNN",
   },
   {
     title: "Kernel Module for System Call Logging",
     description:
       "Developed a Linux kernel module in C to log system calls and monitor process activity in real time, improving system monitoring efficiency.",
     tags: ["C", "Linux", "Kernel", "nproc"],
-    github: "#",
-    demo: "#",
+    github:
+      "https://github.com/Yasesvi-Reddy-Pebbeti/Kernel-Module-for-System-Call-Logging",
   },
   {
     title: "Blockchain-Based Product Authentication",
