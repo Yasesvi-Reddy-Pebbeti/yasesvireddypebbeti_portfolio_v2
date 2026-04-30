@@ -9,7 +9,7 @@ const projects = [
       "Built a scalable multi-tenant web platform with dynamic subdomain routing and tenant-specific content rendering using a unified codebase.",
     tags: ["Next.js", "Node.js", "MongoDB", "NGINX", "PM2"],
     github: "https://github.com/Yasesvi-Reddy-Pebbeti/multi-tenant-conf-app-js",
-    demo: "https://multi-tenant-conf-app-js.vercel.app/ai-frontiers",
+    demo: "https://multi-tenant-conf-app-js.vercel.app/",
   },
   {
     title: "Parallel Sorting: Implementation, Profiling & Analysis",
