@@ -12,15 +12,6 @@ const achievements = {
   ],
   publications: [
     {
-      title:
-        "Plant Disease Identification and Pesticide Recommendation Using CNN",
-      authors: "Yasesvi Reddy Pebbeti, et al.",
-      source: "IJIRCCE",
-      date: "Jun 2024",
-      link: "https://ijircce.com/admin/main/storage/app/pdf/fGL5m6R2DNR1KNtQXtOMoDHYgRVmmjgHQXTa2g1p.pdf",
-      type: "Journal Publication",
-    },
-    {
       title: "Eco-Intelligence: Revolutionizing AI with Sustainability in Mind",
       authors: "Yasesvi Reddy Pebbeti, et al.",
       source: "IJMRSET",
@@ -34,6 +25,15 @@ const achievements = {
       source: "IJMRSET",
       date: "April 2026",
       link: "https://www.ijmrset.com/special-issues/2026/ISGTPES-2025/24_Green%20Urbanization%20Sustainable%20Solutions%20for%20Tomorrow's%20Cities.pdf",
+      type: "Journal Publication",
+    },
+    {
+      title:
+        "Plant Disease Identification and Pesticide Recommendation Using CNN",
+      authors: "Yasesvi Reddy Pebbeti, et al.",
+      source: "IJIRCCE",
+      date: "Jun 2024",
+      link: "https://ijircce.com/admin/main/storage/app/pdf/fGL5m6R2DNR1KNtQXtOMoDHYgRVmmjgHQXTa2g1p.pdf",
       type: "Journal Publication",
     },
   ],
@@ -60,6 +60,12 @@ const achievements = {
       title: "Electronics & Robotics",
       issuer: "B M Birla Science Centre",
       date: "May 2016",
+      credentialId: "",
+    },
+    {
+      title: "National Cadet Corps (NCC) 'B' Certificate",
+      issuer: "NCC",
+      date: "Jul 2020",
       credentialId: "",
     },
   ],
