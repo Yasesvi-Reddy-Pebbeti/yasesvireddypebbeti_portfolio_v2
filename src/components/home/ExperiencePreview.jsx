@@ -2,7 +2,7 @@ const experiences = [
   {
     role: "Graduate Assistant",
     company: "SUNY Polytechnic Institute",
-    period: "Sep 2024 – Present",
+    period: "Sep 2024 – May 2026",
     logo: "/logos/experience/suny.png",
     points: [
       "Engineered automated data pipelines using Python and BeautifulSoup to extract, clean, and structure multi-year U.S. AI policy datasets across all 50 states.",
